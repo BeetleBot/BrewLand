@@ -1,179 +1,163 @@
+# ☕ BrewLand v2.0
+
 <div align="center">
 
-# Development Details
+![Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
+![Hyprland](https://img.shields.io/badge/WM-Hyprland-00A896?style=for-the-badge&logo=hyprland&logoColor=white)
+![Catppuccin](https://img.shields.io/badge/Theme-Catppuccin-F5C2E7?style=for-the-badge)
+![License](https://img.shields.io/badge/License-GPL%203.0-blue?style=for-the-badge)
 
-> _Notice:_ The stable branch is very stable now and may not receive updates for the next few months. Active development has shifted to the beta branch. Once the new features have been thoroughly tested and stabilized, they will be merged back into stable.
+**An elegant, zero-nonsense Hyprland setup brewed with Catppuccin Mocha & Latte.**
 
-# **☕ BrewLand v2.0**
-
-**An elegant Hyprland setup brewed with Catppuccin Mocha and Latte.**  
 </div>
 
-### **About This Setup**
+> **⚠️ Notice:** The `stable` branch is highly stable and may not receive updates for the next few months. Active development has shifted to the `beta` branch. Once new features are tested and stabilized, they will be merged back into stable.
 
-BrewLand is a dotfiles configuration that blends **style, performance, and minimalism** into one cohesive Hyprland experience. Built around the **Catppuccin Mocha and Latte** palette, it delivers rich colors, smooth animations and zero fluff.  
+## 📖 About This Setup
 
-Think of it as the perfect espresso shot for your Linux desktop: smooth, bold, and just the right amount of aesthetic kick.
+**BrewLand** is a dotfiles configuration that blends style, performance, and minimalism into one cohesive Hyprland experience. Built heavily around the [Catppuccin Mocha and Latte](https://github.com/catppuccin/catppuccin) palettes, it delivers rich colors, smooth animations, and zero fluff.
 
-### **🎨 Design Highlights**
+Think of it as the perfect espresso shot for your Linux desktop: **smooth, bold, and just the right amount of aesthetic kick.**
 
-**Zero-nonsense philosophy:** Perfect blur for my taste and in my opinion. Clean. Minimal. Fast. No-Bloat, whatsoever.  
+## ✨ Features
 
-### **✨ Feature Highlights**
+- **🎨 Dual Theme:** Seamlessly switch between Catppuccin Mocha (Dark) and Latte (Light) everywhere—from your terminal to the notification center. Includes a `theme_switcher.sh` script to configure GTK and QT apps manually.
+- **🖼️ Dynamic Wallpapers:** Uses `swww` for dynamic wallpaper switching, powered by a custom wallpaper picker built with Rofi.
+- **🔍 Deep Rofi Integration:** A fully integrated Rofi ecosystem for application launching, emoji picking, file searching, wallpaper selection, and music picking.
+- **🔔 Notification Center:** Beautifully styled `SwayNC` with custom Catppuccin CSS, perfectly integrated with the Waybar module.
+- **🖥️ Master Layout:** Configured for a productive master-stack workflow, featuring a custom "Shelf" (special workspace) for minimized/background apps.
+- **🔒 Integrated Lock Screen:** A cohesive `hyprlock` + `hypridle` setup for seamless security and power management.
+- **🌐 Network & Bluetooth:** Features well-built `impala` (WiFi) and `bluetui` (Bluetooth) setups, mapped to custom keybinds and Waybar modules.
 
-* **Wallpapers** — Uses **swww** for dynamic wallpaper switching via a custom wallpaper picker made with rofi.
-* **Dual theme** — Catppuccin Mocha and Latte, everywhere. From Terminal to Notification centre. You can manually configure the same for GTK and QT apps as well. Check theme_switcher.sh for the details.
-* **Rofi Ecosystem** — Deeply integrated for application launching, emoji picker, file search, wallpaper picker and music picker.
-* **Notification center** — Beautifully styled **SwayNC** with custom CSS, integrated directly with the Waybar module.  
-* **Master Layout** — Configured for a productive master-stack workflow with a custom "Shelf" ie., special workspace.  
-* **Integrated lock screen** — Cohesive **Hyprlock** + **Hypridle** setup.
-* **Wifi and Bluetooth** - A well built impala and bluetui for Bluetooth and Wifi setups. Integrated with a custom keybind and respective waybar module.
+## 🧰 Core Components
 
-### **☕ Screenshots**
+| Component | Tool | Description |
+| :--- | :--- | :--- |
+| **Compositor** | [Hyprland](https://hyprland.org/) | Dynamic tiling Wayland compositor |
+| **Bar** | [Waybar](https://github.com/Alexays/Waybar) | Highly customized status bar with blur |
+| **Wallpapers**| [swww](https://github.com/LGFae/swww) | Handles dynamic background management |
+| **Notifications**| [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Notification center with Catppuccin CSS |
+| **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) | GPU-accelerated terminal emulator |
+| **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Search-driven application and system launcher |
+| **Screenshots** | [Grimblast](https://github.com/hyprwm/contrib/tree/main/grimblast) | Essential screenshot utility |
+| **Lock Screen** | [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/) | Integrated, customized screen lock |
+| **Font** | [iMWritingMono Nerd](https://www.nerdfonts.com/) | Primary font for Waybar and system UI |
 
-#### Full - Dark
-<img width="1920" height="1080" alt="20260122_163322" src="https://github.com/user-attachments/assets/0ed748b8-c7e5-4b9d-a1b0-d74369604d6f" />
+## ⚙️ Installation
 
-#### Full - Light
-<img width="1920" height="1080" alt="20260122_163306" src="https://github.com/user-attachments/assets/8f8d0824-cc3f-4f0e-a791-036e91522315" />
+### Prerequisites
+Before installing, ensure you are running **Arch Linux**. The installer relies on Arch package managers (`pacman` and `yay`).
 
-#### Waybar - Dark
-<img width="1920" height="87" alt="20260122_164623" src="https://github.com/user-attachments/assets/b5284412-9a95-426a-b729-6b8fc4d813d3" />
+### Quick Install
 
-#### Waybar - Light
-<img width="1920" height="104" alt="20260122_164614" src="https://github.com/user-attachments/assets/0a9920b5-c750-4b86-9c39-3dc602ae97d7" />
+Fire it up in just a few simple steps. The installer will automatically verify your OS, set up `yay`, install dependencies, back up your current configs to `~/ConfigBackup/`, and deploy BrewLand.
 
-#### App Launcher - Dark
-<img width="581" height="402" alt="20260122_163513" src="https://github.com/user-attachments/assets/719aa639-330b-42ee-b244-97ee5cab29cb" />
-
-#### App Launcher - Light
-<img width="553" height="380" alt="20260122_163541" src="https://github.com/user-attachments/assets/9fd8cdbb-7fa0-409d-8b7f-0a075610a46a" />
-
-#### File Search - Dark
-<img width="541" height="334" alt="20260122_163805" src="https://github.com/user-attachments/assets/1ed34009-5fcd-4bea-a940-5c8a4f4869e5" />
-
-#### File Search - Light
-<img width="567" height="332" alt="20260122_163752" src="https://github.com/user-attachments/assets/017550a5-0c9e-4902-b3cd-0753a850520d" />
-
-#### Emoji Picker - Dark
-<img width="526" height="416" alt="20260122_165423" src="https://github.com/user-attachments/assets/33b1d3fb-f568-4de8-95d7-5e61938f4565" />
-
-#### Emoji Picker - Light
-<img width="507" height="408" alt="20260122_165415" src="https://github.com/user-attachments/assets/1b6b6445-ed62-4a68-933e-309d0b33bca8" />
-
-#### Clipboard Manager - Dark
-<img width="536" height="355" alt="20260122_165432" src="https://github.com/user-attachments/assets/86a6da0c-eae6-498b-bf10-38cef79fbed9" />
-
-#### Clipboard Manager - Light
-<img width="526" height="349" alt="20260122_165444" src="https://github.com/user-attachments/assets/ce09ff41-cbd6-4302-ac01-d296a2fd5c31" />
-
-#### Wallpaper Picker - Dark
-<img width="1830" height="514" alt="20260122_163104" src="https://github.com/user-attachments/assets/d0311a50-89e1-4c2e-9598-a31feee0d2fd" />
-
-#### Wallpaper Picker - Light
-<img width="1807" height="505" alt="20260122_163150" src="https://github.com/user-attachments/assets/94d3474d-b34b-4601-b38f-bb57fd1838bb" />
-
-#### SwayNC - Dark
-<img width="568" height="347" alt="20260122_164430" src="https://github.com/user-attachments/assets/d288702c-c489-4658-8ca8-df0d4f1ff56c" />
-
-#### SwayNC - Light
-<img width="572" height="340" alt="20260122_164435" src="https://github.com/user-attachments/assets/dd661f2b-8f90-43b4-86ab-89d71531c202" />
-
-#### Custom Music Launcher - Dark
-<img width="564" height="375" alt="20260122_164749" src="https://github.com/user-attachments/assets/619a6a7b-7de6-4d3c-8410-a268d9899d72" />
-
-#### Custom Music Launcher - Light
-<img width="524" height="366" alt="20260122_164814" src="https://github.com/user-attachments/assets/1d7ff2c9-7ded-4b60-a45c-a268d8db0efb" />
-
-### **⚙️ Installation**
-Fire it up in just a few steps(ONLY RUN THIS ON **ARCH LINUX**):  
-```
-git clone https://github.com/BeetleBot/BrewLand.git
-```
-```
-cd BrewLand  
-```
-```
-chmod +x install.sh  
-```
-```
+```bash
+git clone [https://github.com/BeetleBot/BrewLand.git](https://github.com/BeetleBot/BrewLand.git)
+cd BrewLand
+chmod +x install.sh
 ./install.sh
+
 ```
-The installer handles everything:
 
-* Verifies you're on Arch Linux
-* Sets up **yay** if needed    
-* Installs all required dependencies (AUR + official repos)  
-* Backs up existing configs to ~/ConfigBackup/  
-* Deploys new configs to ~/.config/  (or symlink, your choice)
-* Suggests a reboot to apply changes
+*Note: A system reboot is recommended after the installation is complete.*
 
-### **⌨️ Keybindings**
+## ⌨️ Keybindings
 
-The **Super** key (Windows key) is your main modifier.
+The **Super** (Windows) key is your primary modifier.
 
-#### **General & System**
+### General & System
 
 | Keybind | Action |
-| :---- | :---- |
-| Super + Return | Open Terminal (Kitty) |
-| Super + Space | Open App Launcher |
-| Super + Q | Kill Active Window |
-| Super + X | Exit Hyprland |
-| Super + Shift + X | Poweroff |
-| Super + Shift + R | Reboot |
-| Super + Shift + L | Lock Screen (Hyprlock) |
-| Super + Alt + Space | Search Files |
-| Super + . | Emoji Search |
-| Super + / | Clipboard History |
-| Super + Alt + N | Network (impala) |
-| Super + Alt + B | Bluetooth Manager (bluetui) |
-| Super + Shift + W | Wallpaper Grid |
-| Super + R | Reload Waybar |
-| Super + Shift + Z | Toggle Theme (Mocha and Latte) |
+| --- | --- |
+| `Super + Return` | Open Terminal |
+| `Super + Q` | Kill Active Window |
+| `Super + X` | Exit Hyprland |
+| `Super + Shift + X` | Poweroff |
+| `Super + Shift + R` | Reboot |
+| `Super + Shift + L` | Lock Screen (Hyprlock) |
+| `Super + R` | Reload Waybar (`waybar-relaunch.sh`) |
+| `Super + Shift + Z` | Toggle Theme (`theme_switcher.sh`) |
 
-#### **Applications**
+### Applications
 
 | Keybind | Action |
-| :---- | :---- |
-| Super + E | File Manager (thunar) |
-| Super + W | Zen Browser |
-| Super + C | Codium |
-| Super + O | Obsidian |
-| Super + F | Fadein |
-| Super + Shift + M | Music launcher |
+| --- | --- |
+| `Super + E` | File Manager |
+| `Super + W` | Browser (Zen Browser) |
+| `Super + C` | Editor (Codium) |
+| `Super + O` | Notes (Obsidian) |
+| `Super + F` | Fadein |
 
-#### **Screenshots (Hyprshot)**
-
-| Keybind | Action |
-| :---- | :---- |
-| Super + Alt + 1 | Screenshot Monitor |
-| Super + Alt + 2 | Screenshot Window |
-| Super + Alt + 3 | Screenshot Region |
-
-#### **Navigation & Layout**
+### Rofi Menus & Utilities
 
 | Keybind | Action |
-| :---- | :---- |
-| Super + Arrows | Move Focus (Up/Down/Left/Right) |
-| Super + 0-9 | Switch Workspace |
-| Super + Shift + 0-9 | Move Window to Workspace |
-| Super + S | Toggle "Magic" Shelf (Special Workspace) |
-| Super + Shift + S | Minimize Window (Move to Special) |
-| Super + V | Toggle Floating |
-| Super + G | Toggle Group (Tabs) |
-| Super + Tab | Cycle Group Active |
+| --- | --- |
+| `Super + Space` | Open App Launcher |
+| `Super + /` | Clipboard History |
+| `Super + .` | Emoji Picker |
+| `Super + Alt + Space` | Search Files |
+| `Super + Shift + W` | Wallpaper Menu |
+| `Super + Shift + M` | Music Menu |
+| `Super + Alt + N` | Network Manager (`impala`) |
+| `Super + Alt + B` | Bluetooth Manager (`bluetui`) |
+| `Super + Shift + D` | Drive Script |
+| `Super + Shift + B` | Backup Drive Script |
 
-### **🧰 Core Components**
+### Window Management & Layout
 
-| Type | Tool | Description |
-| :---- | :---- | :---- |
-| Compositor | **Hyprland** | Dynamic tiling Wayland compositor |
-| Bar | **Waybar** | Highly customized status bar with blur |
-| Wallpapers | **swww** | Handles dynamic background management |
-| Notifications | **SwayNC** | Notification center with Catppuccin CSS |
-| Terminal | **Kitty** | GPU-accelerated terminal emulator |
-| Launcher | **Rofi** | Search-driven application and system launcher |
-| Screenshots | **Grimblast** | Essential screenshot utility |
-| Lock Screen | **Hyprlock** | Integrated screen lock |
-| Font | **iMWritingMono Nerd** | Primary font for Waybar and system UI |
+| Keybind | Action |
+| --- | --- |
+| `Super + Arrows` | Move Focus (Up/Down/Left/Right) |
+| `Super + Shift + Left` | Swap Window with Master |
+| `Super + V` | Toggle Floating Mode |
+| `Super + G` | Toggle Tabbed Group |
+| `Super + Tab` | Cycle Active Group |
+| `Super + Left Click` | Move Floating Window (Drag) |
+| `Super + Right Click` | Resize Floating Window (Drag) |
+
+### Workspaces
+
+| Keybind | Action |
+| --- | --- |
+| `Super + 1-0` | Switch to Workspace 1-10 |
+| `Super + Shift + 1-0` | Move Active Window to Workspace 1-10 |
+| `Super + Scroll` | Cycle Through Workspaces |
+| `Super + S` | Toggle "Magic" Shelf (Special Workspace) |
+| `Super + Shift + S` | Move Active Window to "Magic" Shelf |
+| `Super + Alt + S` | Bring Window to Current Workspace |
+
+### Screenshots (Grimblast)
+
+| Keybind | Action |
+| --- | --- |
+| `Super + Alt + 1` | Screenshot Monitor (Copy/Save) |
+| `Super + Alt + 2` | Screenshot Active Window (Copy/Save) |
+| `Super + Alt + 3` | Screenshot Region (Freeze/Copy/Save) |
+
+### Multimedia & Hardware
+
+*Standard multimedia keys (XF86) are fully mapped for ease of use.*
+| Keybind | Action |
+| :--- | :--- |
+| `Volume Up / Down` | Adjust Volume (via `wpctl`) |
+| `Mute` | Toggle Audio Mute |
+| `Mic Mute` | Toggle Microphone Mute |
+| `Brightness Up/Down` | Adjust Screen Brightness (`brightnessctl`) |
+| `Media Keys` | Play, Pause, Next, Previous (`playerctl`) |
+
+## ☕ Screenshots
+
+*(Note: Ensure these filenames include their correct extensions and paths, e.g., `assets/20260122_163322.png` if you have placed them in an assets folder)*
+
+### Light & Dark Themes
+
+| Dark Mode (Mocha) | Light Mode (Latte) |
+| --- | --- |
+|  |  |
+|  |  |
+|  |  |
+
+
+
+*Created with ❤️ by BeetleBot.*
