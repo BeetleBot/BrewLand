@@ -19,6 +19,11 @@
 
 Think of it as the perfect espresso shot for your Linux desktop: **smooth, bold, and just the right amount of aesthetic kick.**
 
+<img width="1920" height="1080" alt="20260225_195335" src="https://github.com/user-attachments/assets/548e7985-0143-4f40-b35c-d10ef3d750e1" />
+
+<img width="1920" height="1080" alt="20260225_201122" src="https://github.com/user-attachments/assets/5e93b5cd-d4ce-487a-9c28-57610e87b9cd" />
+
+
 ## ✨ Features
 
 - **🎨 Dual Theme:** Seamlessly switch between Catppuccin Mocha (Dark) and Latte (Light) everywhere—from your terminal to the notification center. Includes a `theme_switcher.sh` script to configure GTK and QT apps manually.
@@ -145,19 +150,6 @@ The **Super** (Windows) key is your primary modifier.
 | `Mic Mute` | Toggle Microphone Mute |
 | `Brightness Up/Down` | Adjust Screen Brightness (`brightnessctl`) |
 | `Media Keys` | Play, Pause, Next, Previous (`playerctl`) |
-
-## ☕ Screenshots
-
-*(Note: Ensure these filenames include their correct extensions and paths, e.g., `assets/20260122_163322.png` if you have placed them in an assets folder)*
-
-### Light & Dark Themes
-
-| Dark Mode (Mocha) | Light Mode (Latte) |
-| --- | --- |
-|  |  |
-|  |  |
-|  |  |
-
 
 
 *Created with ❤️ by BeetleBot.*
